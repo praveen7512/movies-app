@@ -1,25 +1,84 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from "axios";
+import { useState } from 'react';
+import {useEffect} from "react"
+import MovieCard from './components/MovieCard';
+import SearchBar from './components/SearchBar';
+import './components/SearchBar.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App() {    
+
+
+  const [listData , setData] = useState([]);
+  
+  
+
+
+
+
+    const getData = async () => {
+
+    const res = await axios.get("https://movies-app.prakashsakari.repl.co/api/movies") 
+
+    const data = res.data
+
+    setData(data)
+  }
+
+
+  useEffect(
+  
+    () => {
+      getData()
+    }
+    
+    ,[])
+
+return (
+   
+    
+   <div className="main-containerFirst ">
+
+   
+  
+<div className="main">
+     
+   
+     {listData.map(post => (
+       <MovieCard key={post.id} movies={post}/>
+       
+     ))}
+   
+ 
+  </div>
+   </div>
+  
+
+
+
+
+
+  
+)
+ 
+
+  
+
+
+
+
+  
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+  
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+
+
+ 
+
+
+ .card-container {
+    width :400px;
+    height: 500px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 10px;
+   
+ }
+
+
+ .imgclass {
+
+   width:100%;
+   height: 20rem;
+  
+
+
+
+ }
+
+ .imgtag {
+
+   object-fit: contain;
+   height: 100%;
+   width: 100%;
+
+
+
+ }
+
+ span {
+    color: white;
+    font-style: bold;
+ }
+
+
+ .rating{
+    display: flex;
+    justify-content: space-between;
+  
+ }
+
+ .details {
+   
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+   
+    overflow-y: hidden;
+ }
+
+
+ .title {
+   display: flex;
+   justify-content: center;
+ }
+
+
+
+
+
+
+
+
+
+
+
